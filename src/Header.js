@@ -115,7 +115,7 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
             className="text-slate-800 hover:text-slate-900 transition-colors py-2"
           >
-            Home
+            Homeee
           </NavLink>
           <NavLink
             to="/about"
