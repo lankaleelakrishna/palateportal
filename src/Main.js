@@ -331,68 +331,19 @@ export default function Main() {
             growth
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
             {services.map((service, index) => (
               <div
                 key={index}
-                ref={(el) => (cardRefs.current[index] = el)}
-                className="h-96 opacity-0 translate-y-8 [&.animate-in]:opacity-100 [&.animate-in]:translate-y-0 transition-all duration-300"
-                style={{ transitionDelay: `${index * 80}ms` }}
+                className="flex flex-col items-center text-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="relative w-full h-full transition-transform duration-500 group [perspective:1000px] hover:[transform:rotateY(180deg)]" style={{transformStyle: 'preserve-3d'}}>
-                  
-                  {/* Front of card */}
-                  <div
-                    className="absolute w-full h-full bg-white border border-slate-200 rounded-2xl shadow-lg shadow-slate-300/40 group-hover:shadow-2xl group-hover:shadow-slate-400/30 p-6 flex flex-col items-center justify-center text-center"
-                    style={{backfaceVisibility: 'hidden'}}
-                  >
-                    <div className="mb-5 text-slate-800 group-hover:scale-105 transition-transform duration-300">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3">{service.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{service.desc}</p>
-                  </div>
-
-                  {/* Back of card */}
-                  <div
-                    className="absolute w-full h-full bg-slate-50 border border-slate-200 rounded-2xl shadow-lg shadow-slate-300/40 p-6 flex flex-col justify-between overflow-y-auto"
-                    style={{backfaceVisibility: 'hidden', transform: 'rotateY(180deg)'}}
-                  >
-                    <div>
-                      <h4 className="text-lg font-semibold text-slate-800 mb-3">Key Features</h4>
-                      <ul className="space-y-2 mb-4">
-                        {service.features.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-slate-600">
-                            <span className="text-slate-400 mt-1">•</span>
-                            <span className="text-sm">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <h4 className="text-lg font-semibold text-slate-800 mb-2 mt-4">Tech Stack</h4>
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {service.technologies.map((tech, i) => (
-                          <span key={i} className="text-xs text-slate-700 bg-slate-100 border border-slate-200 rounded-full px-2 py-1 font-medium">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="space-y-3 w-full">
-                      <button
-                        onClick={() => setSelectedService(service)}
-                        className="w-full px-4 py-3 bg-slate-900 hover:bg-slate-700 text-white font-semibold rounded-lg transition duration-300"
-                      >
-                        View More →
-                      </button>
-                      <button
-                        onClick={() => navigate("/contact")}
-                        className="w-full px-4 py-3 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold rounded-lg transition duration-300"
-                      >
-                        Apply Now
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                {service.icon}
+                <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2 text-slate-800">
+                  {service.title}
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600">
+                  {service.desc}
+                </p>
               </div>
             ))}
           </div>

@@ -1,6 +1,7 @@
 // src/Header.js
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,24 +99,7 @@ export default function Header() {
           className="md:hidden text-slate-700 p-2 focus:outline-none"
           aria-label="Toggle menu"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-8 h-8 transition-transform duration-300"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d={
-                isOpen
-                  ? "M6 18L18 6M6 6l12 12"
-                  : "M4 6h16M4 12h16M4 18h16"
-              }
-            />
-          </svg>
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
 
@@ -169,6 +153,48 @@ export default function Header() {
             Contact
           </NavLink>
         </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-slate-700 hover:text-slate-900 focus:outline-none"
+        >
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+        {isOpen && (
+          <nav className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-start gap-4 p-4">
+            <NavLink
+              to="/"
+              className="text-slate-700 hover:text-slate-900"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="text-slate-700 hover:text-slate-900"
+              onClick={() => setIsOpen(false)}
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/services"
+              className="text-slate-700 hover:text-slate-900"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="text-slate-700 hover:text-slate-900"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </NavLink>
+          </nav>
+        )}
       </div>
     </header>
   );

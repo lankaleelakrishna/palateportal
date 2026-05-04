@@ -12,20 +12,20 @@ export default function Footer() {
     <footer className="bg-white border-t border-slate-200 text-slate-600">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Main footer content */}
-        <div className="py-16 md:py-20 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
+        <div className="py-16 md:py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {/* Brand / Logo Column */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <img
                 src="/pnpn.png"
                 alt="Palate Networks Logo"
-                className="h-12 w-12 rounded-full object-cover"
+                className="h-10 w-10 rounded-full object-cover"
               />
-              <span className="text-2xl md:text-2xl font-extrabold tracking-tight bg-black text-transparent bg-clip-text">
+              <span className="text-xl sm:text-2xl font-extrabold tracking-tight bg-black text-transparent bg-clip-text">
                 Palate Networks
               </span>
             </div>
-            <p className="text-base leading-relaxed mb-6 text-slate-600">
+            <p className="text-sm sm:text-base leading-relaxed mb-6 text-slate-600">
               Building the Future with Digital Excellence<br />
               since 2017.
             </p>
@@ -114,13 +114,6 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {/* <FaGithub />
-              </a>
-              <a 
-                href="mailto:hello@palatenetwork.com" 
-                className="text-2xl text-slate-600 hover:text-indigo-600 transition-colors duration-300 transform hover:scale-110"
-                aria-label="Email" */}
-              
                 <FaEnvelope />
               </a>
             </div>
