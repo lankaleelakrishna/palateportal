@@ -54,7 +54,7 @@ export default function Footer() {
             <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-5">Connect</h3>
             <div className="flex gap-5">
               <SocialLink href="https://twitter.com" label="Twitter / X"><FaTwitter /></SocialLink>
-              <SocialLink href="https://linkedin.com" label="LinkedIn"><FaLinkedinIn /></SocialLink>
+              <SocialLink href="https://www.linkedin.com/search/results/all/?keywords=Palate%20Networks&origin=RICH_QUERY_TYPEAHEAD_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A97454766&position=0" label="LinkedIn"><FaLinkedinIn /></SocialLink>
               <SocialLink href="https://github.com" label="GitHub"><FaGithub /></SocialLink>
               <SocialLink href="mailto:info@palatenetworks.com" label="Email"><FaEnvelope /></SocialLink>
             </div>

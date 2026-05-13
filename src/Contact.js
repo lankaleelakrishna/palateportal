@@ -6,7 +6,7 @@ const contactInfo = [
   {
     icon: <FaMapMarkerAlt className="text-2xl text-slate-700" />,
     title: "Address",
-    details: ["Palate Networks Pvt Ltd", "Hyderabad, India"],
+    details: ["Plot No 5, Inorbit Mall Rd, opposite Durgam Cheruvu, Doctor's Colony, HITEC City, Hyderabad, Telangana 500081"],
   },
   {
     icon: <FaPhone className="text-2xl text-slate-700" />,
@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: <FaEnvelope className="text-2xl text-slate-700" />,
     title: "Email",
-    details: ["info@palatenetworks.com"],
+    details: ["info@palatenetworks.in"],
   },
   {
     icon: <FaClock className="text-2xl text-slate-700" />,
