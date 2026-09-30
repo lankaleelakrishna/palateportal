@@ -9,11 +9,6 @@ const contactInfo = [
     details: ["Plot No 5, Inorbit Mall Rd, opposite Durgam Cheruvu, Doctor's Colony, HITEC City, Hyderabad, Telangana 500081"],
   },
   {
-    icon: <FaPhone className="text-2xl text-slate-700" />,
-    title: "Phone",
-    details: ["+91 8142799339"],
-  },
-  {
     icon: <FaEnvelope className="text-2xl text-slate-700" />,
     title: "Email",
     details: ["info@palatenetworks.in"],
